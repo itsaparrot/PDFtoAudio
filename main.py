@@ -14,9 +14,7 @@ with open('PDF/sample.pdf', 'rb') as pdf_object:
         page_object = pdf_reader.getPage(i)
         my_text += page_object.extractText()
 
-
 voicerss = os.environ.get('VOICERSS_API_KEY')
-
 parameters = {
     'key': voicerss,
     'src': my_text,
